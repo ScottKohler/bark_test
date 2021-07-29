@@ -1,0 +1,8 @@
+<h1>Add Your Dog</h1>
+<%= render partial: 'form' %>
+
+<% if !@d.nil? %>
+  <% @d.images.each do |image| %>
+    <%= image_tag url_for(image), alt: "Photo of #{@dog.name}" %>
+  <% end %>
+<% end %>
